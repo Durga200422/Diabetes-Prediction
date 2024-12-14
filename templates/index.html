@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Diabetes Prediction</h2>
+        <form action="{{ url_for('predict') }}" method="POST">
+            
+            <label for="age">Age:</label>
+            <input type="number" step="any" name="age" required>
+
+            <label for="hypertension">Hypertension (0 = No, 1 = Yes):</label>
+            <input type="number" min="0" max="1" name="hypertension" required>
+
+            <label for="heart_disease">Heart Disease (0 = No, 1 = Yes):</label>
+            <input type="number" min="0" max="1" name="heart_disease" required>
+
+            <label for="bmi">BMI:</label>
+            <input type="number" step="any" name="bmi" required>
+
+            <label for="HbA1c_level">HbA1c Level:</label>
+            <input type="number" step="any" name="HbA1c_level" required>
+
+            <label for="blood_glucose_level">Blood Glucose Level:</label>
+            <input type="number" step="any" name="blood_glucose_level" required>
+
+            <label for="smoking_history">Smoking History (0 = Never, 1 = Former, 2 = Current):</label>
+            <input type="number" min="0" max="2" name="smoking_history" required>
+
+            <label for="gender">Gender (0 = Female, 1 = Male):</label>
+            <input type="number" min="0" max="1" name="gender" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction_text %}
+        <div class="result">
+            <h3>{{ prediction_text }}</h3>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
