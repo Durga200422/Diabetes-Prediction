@@ -159,6 +159,11 @@ To access the website, use the link https://sugarscope.onrender.com/.
 
     2. The model predicts whether the patient is at risk of developing diabetes.
 
+![Website Interface](https://github.com/user-attachments/assets/6513bf7e-2ebc-43b8-9d2c-77ad3d66b0b0)
+![Non Diabetics Prediction](https://github.com/user-attachments/assets/933cf9ae-fb74-4330-8be8-50576bc06895)
+![Diabetics Prediction](https://github.com/user-attachments/assets/e322b440-74f4-434f-9023-3c2887f484da)
+
+
 
 ## Conclusion
 
